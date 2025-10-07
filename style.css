@@ -1,91 +1,104 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f6f9;
+    background: #f9f9f9;
     color: #333;
-    scroll-behavior: smooth;
   }
   
-  /* Header */
+  /* ---------- HEADER ---------- */
   header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 40px;
-    background: linear-gradient(90deg, #222, #444);
-    color: #fff;
+    background: #222;
+    color: white;
+    padding: 10px 20px;
     position: sticky;
     top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
   }
   
-
   .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
   }
   
   .logo img {
-    height: 60px;
+    height: 70px;
+  }
+  
+  .logo h1 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #fff;
+  }
+  
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
   }
   
   nav a {
-    text-decoration: none;
-    margin: 0 12px;
     color: #fff;
+    text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
   }
   
   nav a:hover {
-    color: #ffb347;
+    color: #ff6600;
   }
   
   .contacto-btn {
     background-color: #ff6600;
-    color: white;
-    padding: 10px 18px;
+    padding: 8px 14px;
     border-radius: 20px;
-    text-decoration: none;
-    transition: background 0.3s;
+    color: white;
   }
   
   .contacto-btn:hover {
     background-color: #e65c00;
   }
   
-  /* Secciones */
-  section {
-    padding: 40px 20px;
-  }
-  
-  .titulo-seccion {
+  /* ---------- BUSCADOR ---------- */
+  .buscador-container {
     text-align: center;
-    margin-bottom: 25px;
-    color: #222;
+    margin: 25px 0;
   }
   
-  /* Productos y ofertas */
-  .grid {
+  #buscador {
+    padding: 12px 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 25px;
+    border: 2px solid #ff6600;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  /* ---------- PRODUCTOS ---------- */
+  .productos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px;
+    padding: 20px;
   }
   
   .producto {
     background: #fff;
     border-radius: 10px;
     padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+    transition: transform 0.3s;
   }
   
   .producto:hover {
-    transform: scale(1.03);
+    transform: translateY(-5px);
   }
   
   .producto img {
@@ -98,90 +111,121 @@ body {
     color: #e63946;
   }
   
-  /* Sobre nosotros */
-  .nosotros p {
-    max-width: 700px;
-    margin: 0 auto 20px;
-    line-height: 1.6;
-    text-align: center;
-  }
-  
-  .sugerencias ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-  }
-  
-  .sugerencias li {
-    margin: 8px 0;
-  }
-  
-  /* Contacto */
-  .contacto-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    text-align: center;
-  }
-  
-  .btn-whatsapp.grande {
+  .btn-whatsapp {
+    display: inline-block;
     background: #25D366;
     color: white;
-    padding: 15px 25px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: transform 0.2s, background 0.3s;
-  }
-  
-  .btn-whatsapp.grande:hover {
-    background: #1ebe5c;
-    transform: scale(1.05);
-  }
-  
-  /* Formulario */
-  .formulario {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .formulario input,
-  .formulario textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-  }
-  
-  .formulario button {
-    background: #ff6600;
-    color: white;
-    border: none;
     padding: 10px 15px;
-    border-radius: 6px;
-    cursor: pointer;
+    margin-top: 8px;
+    border-radius: 8px;
+    text-decoration: none;
     font-weight: bold;
     transition: background 0.3s;
   }
   
-  .formulario button:hover {
-    background: #e65c00;
+  .btn-whatsapp:hover {
+    background: #1ebe5c;
   }
   
-  /* Footer */
+  /* ---------- SOBRE NOSOTROS ---------- */
+  .nosotros {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+  }
+  
+  .nosotros h2 {
+    color: #ff6600;
+  }
+  
+  .nosotros p {
+    max-width: 700px;
+    margin: 10px auto 40px;
+  }
+  
+  .valores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .valor {
+    background: #ff6600;
+    color: white;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  .valor:hover {
+    background: #e65c00;
+    transform: scale(1.1);
+  }
+  
+  .valor i {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
+  
+  /* ---------- FOOTER ---------- */
   footer {
     text-align: center;
     background: #222;
-    color: #ccc;
-    padding: 20px;
+    color: white;
+    padding: 30px 20px;
   }
-  #no-coincidencias {
-    font-style: italic;
+  
+  footer h2 {
+    color: #ff6600;
+  }
+  
+  footer form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto 0;
+  }
+  
+  footer input,
+  footer textarea {
+    margin: 8px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+  
+  footer button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  footer button:hover {
+    background: #e65c00;
+  }
+  
+  .btn-whatsapp-footer {
+    background: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .btn-whatsapp-footer:hover {
+    background: #1ebe5c;
   }
